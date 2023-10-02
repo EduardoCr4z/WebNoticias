@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+         <!-- Encabezado-->
+        <title>Registro</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquerys/3.3.1/jquery.min.js"/>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"/>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"/>
+        <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"/>
+        
+        
+        <link rel="stylesheet" type="text/css" href="Estilos/index.css?1.0" media="all"/>
+    </head>
+    <body>
+         <!--CONTENEDOR-->
+        <div class="modal-dialog-centered text-center">
+            <div class="col-sm-8 panel-section">
+                <div class="contenedor-content">
+                     <!-- NAV DE LA PAGINA-->
+                    <div class="col-12 AvatarInicio-img">
+                        <br></br>
+                        <img src="Imagenes/AvatarI.png"/>
+                    </div>
+                    
+                    <h:form class="col-12">
+                         <!--INGRESO DPI-->
+                        <div class="form-group" id="dpi-group">    
+                            <h:inputText class="form-control" id="dpi" value="#{controllerManagedBean.dpi}" a:placeholder="Dpi"/>
+                        </div>
+                        <!--INGRESO NOMBRE-->
+                        <div class="form-group" id="nombre-group">
+                            <h:inputText class="form-control" id="nombre" value="#{controllerManagedBean.nombre}" a:placeholder="Nombre"></h:inputText>
+                        </div>
+                        <!--INGRESO APELLIDO-->
+                        <div class="form-group" id="apellido-group">
+                            <h:inputText class="form-control" id="apellido" value="#{controllerManagedBean.apellido}" a:placeholder="Apellido"></h:inputText>
+                        </div>
+                        <!--INGRESO CORREO-->
+                        <div class="form-group" id="user-group">
+                            <h:inputText class="form-control" id="correo" value="#{controllerManagedBean.correo}" a:placeholder="Correo"></h:inputText>
+                        </div>
+                        <!--INGRESO CONTRASEÑA-->
+                        <div class="form-group" id="contrasena-group">
+                            <h:inputText a:type="password"  class="form-control" id="pass" value="#{controllerManagedBean.pass}" a:placeholder="Contraseña"></h:inputText>
+                        </div>
+                        <!--INGRESO GÉNERO-->
+                        <div class="form-group" id="genero-group">
+                            <h:selectOneMenu class="form-control" id="genero" value="#{controllerManagedBean.genero}">
+                                <f:selectItem itemLabel="Masculino" itemValue="Masculino"/>
+                                <f:selectItem itemLabel="Femenino" itemValue="Femenino"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <!--INGRESO FECHA DE NACIMIENTO-->
+                        <div class="form-group" id="fecha-group">
+                                <h:inputText a:type="date" class="form-control" id="nacimiento" value="#{controllerManagedBean.nacimiento}"></h:inputText>
+                        </div>
+                        <!--INGRESO AVATAR-->
+                        <div class="form-group">
+                            <input accept="image/png,image/jpeg" type="file" alue="#{controllerManagedBean.avatar}"/>
+                        </div>
+                        <!--BOTÓN MODIFICAR DATOS-->
+                        <h:commandButton type="submit" value="Guardar" class="btn btn-dark" action="#{controllerManagedBean.modificarUsuario()}"></h:commandButton>
+                        <br></br>
+                        <br></br>
+                        
+                    </h:form>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>

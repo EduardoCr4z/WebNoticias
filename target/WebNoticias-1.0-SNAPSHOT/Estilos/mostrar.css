@@ -1,0 +1,97 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 28 oct 2022, 23:39:30
+    Author     : EduardoCruz
+*/
+
+
+
+body{
+    background: url(../Imagenes/Fondo2.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.panel-section{
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 0;
+}
+
+.contenedor-content{
+    background-color: #4d0089;
+    opacity: .90;
+    padding: 0 20px;
+    box-shadow: 0px 0px 50px  #1c2833;
+}
+
+.contenedor-titulo{
+    background-color: white;
+    opacity: .90;
+    padding: 0 20px;
+    box-shadow: 0px 0px 50px  #1c2833;
+}
+
+.contenedor-cuerpo{
+    background-color: gray;
+    opacity: .90;
+    padding: 0 20px;
+    box-shadow: 0px 0px 50px  #1c2833;
+}
+
+.icononoticias-img img{
+    width: 70px;
+    height: 70px;
+}
+
+.titulado{
+    color: white;
+}
+
+.form-group::before{
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left:28px;
+    font-size:22px;
+    padding-top:4px;
+}
+
+.form-group#user-group::before{
+    
+    content:"\f007";
+}
+
+.table table-striped{
+    background-color: white;
+}
+
+.estilo_contenedor#contenedor{
+    background-color: withe;
+    opacity: .90;
+    box-shadow: 0px 0px 50px  #1c2833;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 0;
+}
+
+.col-8{
+    color: white;
+}
+.col{
+    color: white;
+}
+
+.col-8#col1{
+    background-color: black;
+    color: white;
+}
+.col#col2{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.col-8#col3{
+    background-color: gray;
+    color: white;
+}

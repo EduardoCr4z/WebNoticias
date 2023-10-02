@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+         <!-- Encabezado-->
+        <title>Noticia</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquerys/3.3.1/jquery.min.js"/>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"/>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"/>
+        <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"/>
+        
+        
+        <link rel="stylesheet" type="text/css" href="Estilos/mostrar.css?1.0" media="all"/>
+    </h:head>
+    <h:body>
+         <!--Nav de la página-->
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="col-12 icononoticias-img">
+                <br></br>
+                <img src="Imagenes/Noticias.png"/>  
+            </div>
+        </nav>
+         <!--Contenedor-->
+        <div class="modal-dialog-centered text-center">
+            <div class="container panel-section">
+                <div class="contenedor-content">
+                    <br/>
+                    <br/>
+                    <!--Fila 1-->
+                    <div class="row">
+                        <!--Columna 1-->
+                        <div class="col-8" id="col1">
+                            <h1>#{controllerManagedBeanNoticias.titulo}</h1> 
+                        </div>
+                        <!--Columna 2-->
+                        <div class="col" id="col2">
+                            <h3>Fecha</h3>
+                            <h4>#{controllerManagedBeanNoticias.fecha}</h4>
+                            <br/>
+                            <h3>Autor</h3>
+                            <h4>#{controllerManagedBeanNoticias.autor}</h4>
+                            <br/>
+                        </div>
+                    </div>
+                    <!--Fila 2-->
+                    <div class="row">
+                        <!--Columna 3-->
+                        <div class="col-8" id="col3">
+                            <h3>#{controllerManagedBeanNoticias.cuerpo}</h3>
+                        </div> 
+                        <!--Columna 4-->
+                        <div class="col" id="col2">
+                            <h3>Codigo de pais</h3>
+                            <h4>#{controllerManagedBeanNoticias.pais}</h4>
+                            <br/>
+                            <h3>Categoria</h3>
+                            <h4>#{controllerManagedBeanNoticias.categoria}</h4>
+                        </div>
+                    </div>
+                    <!--Fila 3-->
+                    <div class="row">
+                        <!--Columna 5-->
+                        <div class="col-8" id="col7">
+                            <img src="#{controllerManagedBeanNoticias.foto}"/>  
+                        </div>
+                    </div>
+                    
+                     <br/>
+                    <br/>
+                </div>
+            </div>
+        </div>
+        
+         <!--Barra de navegación-->
+        <h:form>
+            <p:dock position="top" >
+                <p:menuitem value="Salir" icon="Imagenes/Iconos/Home.png" url="index.xhtml"/>
+                <p:menuitem value="Modificar Usuario" icon="Imagenes/Iconos/Editar.png" url="Modificar.xhtml"/>
+                <p:menuitem value="Buscar nueva noticia" icon="Imagenes/Iconos/Buscar.png" url="Noticias.xhtml"/>
+            </p:dock>
+        </h:form>
+    </h:body>
+</html>
